@@ -1,7 +1,7 @@
 package com.example.EsercizoBE_U2_W1_D1_Spring;
 
 import com.example.EsercizoBE_U2_W1_D1_Spring.entities.Drink;
-import com.example.EsercizoBE_U2_W1_D1_Spring.entities.ElementBean;
+import com.example.EsercizoBE_U2_W1_D1_Spring.entities.AppConfig;
 import com.example.EsercizoBE_U2_W1_D1_Spring.entities.Pizza;
 import com.example.EsercizoBE_U2_W1_D1_Spring.entities.Topping;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +18,7 @@ public class EsercizoBeU2W1D1SpringApplication {
 	}
 
 	public static void menuConfig(){
-		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(ElementBean.class);
+		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
 		Pizza p1 = (Pizza) appContext.getBean("pizzaElement", "Pizza Margherita",1104,4.99,"(tomato,cheese)");
 		Pizza p2 = (Pizza) appContext.getBean("pizzaElement", "Hawaiian Pizza",1024,6.49,"(tomato, cheese, ham, pineapple)");
