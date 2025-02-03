@@ -14,10 +14,10 @@ public class EsercizoBeU2W1D1SpringApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(EsercizoBeU2W1D1SpringApplication.class, args);
-		pizzaContainer();
+		menuConfig();
 	}
 
-	public static void pizzaContainer(){
+	public static void menuConfig(){
 		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(ElementBean.class);
 
 		Pizza p1 = (Pizza) appContext.getBean("pizzaElement", "Pizza Margherita",1104,4.99,"(tomato,cheese)");
