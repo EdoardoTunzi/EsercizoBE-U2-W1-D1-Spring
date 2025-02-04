@@ -20,7 +20,26 @@ public class AppRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Pizza p1 = appService.createpizza().builder().name("Pizza Margherita").ingredients("(tomato,cheese)").calories(1104).price(4.99).build();
+
+        Menu menu = appService.createMenu();
+        menu.printMenu();
+
+        Tavolo t1 = appService.createTavolo1();
+        Ordine o1 = new Ordine(4, t1);
+        o1.addMenuElement(appService.createMargheritaPizza());
+        o1.addMenuElement(appService.createHawaiianPizza());
+        o1.addMenuElement(appService.createLemonade());
+
+        System.out.println("Dettagli Tavolo 1:");
+        o1.printOrder();
+
+        Tavolo t2 = appService.createTavolo2();
+        Ordine o2 = new Ordine(3,t2);
+        o2.addMenuElement(appService.createSalamiPizzaXL());
+        o2.addMenuElement(appService.createWine());
+        System.out.println("Dettagli Tavolo 2:");
+        o2.printOrder();
+        /*Pizza p1 = appService.createpizza().builder().name("Pizza Margherita").ingredients("(tomato,cheese)").calories(1104).price(4.99).build();
         Drink d1 = appService.createDrink().builder().name("Lemonade").calories(128).price(1.29).additionalInfo("(0,33l)").build();
 
 
@@ -35,6 +54,6 @@ public class AppRunner implements CommandLineRunner {
         Ordine o1 = appService.createOrdine().builder().numeroOrdine(1).statoOrdine(StatoOrdine.IN_CORSO).numeroCoperti(4).costoCoperto(costoCoperto).oraDiAcquisizione(LocalTime.now()).tavolo(t1).listaElementiOrdinati(listaOrdine).build();
 
         System.out.println(o1);
-        System.out.println(" Il totale è " + o1.getTotaleOrdine());
+        System.out.println(" Il totale è " + o1.getTotaleOrdine());*/
     }
 }

@@ -5,12 +5,16 @@ import lombok.experimental.SuperBuilder;
 
 
 /*@NoArgsConstructor(force = true)*/
-@AllArgsConstructor
+
 @Data
-@SuperBuilder
 public class Topping extends MenuElement {
 
-  /*  public Topping(String name, int calories, double price) {
+    public Topping(String name, int calories, double price) {
         super(name, calories, price);
-    }*/
+    }
+
+    @Override
+    public String toString() {
+        return "Topping{ " + super.toString() + "}";
+    }
 }

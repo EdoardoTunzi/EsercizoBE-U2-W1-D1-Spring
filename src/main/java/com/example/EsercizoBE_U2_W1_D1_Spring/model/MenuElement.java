@@ -6,7 +6,6 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@SuperBuilder
 public abstract class MenuElement {
     private String name;
     private int calories;
