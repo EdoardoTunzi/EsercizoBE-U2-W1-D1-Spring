@@ -1,9 +1,9 @@
 package com.example.EsercizoBE_U2_W1_D1_Spring;
 
-import com.example.EsercizoBE_U2_W1_D1_Spring.entities.Drink;
-import com.example.EsercizoBE_U2_W1_D1_Spring.entities.AppConfig;
-import com.example.EsercizoBE_U2_W1_D1_Spring.entities.Pizza;
-import com.example.EsercizoBE_U2_W1_D1_Spring.entities.Topping;
+import com.example.EsercizoBE_U2_W1_D1_Spring.model.Drink;
+import com.example.EsercizoBE_U2_W1_D1_Spring.configuration.AppConfig;
+import com.example.EsercizoBE_U2_W1_D1_Spring.model.Pizza;
+import com.example.EsercizoBE_U2_W1_D1_Spring.model.Topping;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,7 +14,7 @@ public class EsercizoBeU2W1D1SpringApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(EsercizoBeU2W1D1SpringApplication.class, args);
-		menuConfig();
+		/*menuConfig();*/
 	}
 
 	public static void menuConfig(){

@@ -1,13 +1,16 @@
-package com.example.EsercizoBE_U2_W1_D1_Spring.entities;
+package com.example.EsercizoBE_U2_W1_D1_Spring.model;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
+@Data
+@SuperBuilder
 public class Pizza extends MenuElement{
     private String ingredients;
 
-    public Pizza(String name, int calories, double price, String ingredients) {
+   /* public Pizza(String name, int calories, double price, String ingredients) {
         super(name, calories, price);
         this.ingredients = ingredients;
     }
@@ -18,5 +21,5 @@ public class Pizza extends MenuElement{
 
     public void setIngredients(String ingredients) {
         this.ingredients = ingredients;
-    }
+    }*/
 }

@@ -1,15 +1,18 @@
-package com.example.EsercizoBE_U2_W1_D1_Spring.entities;
+package com.example.EsercizoBE_U2_W1_D1_Spring.model;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
+@Data
+@SuperBuilder
 public abstract class MenuElement {
     private String name;
     private int calories;
     private double price;
 
-    public MenuElement(String name, int calories, double price) {
+   /* public MenuElement(String name, int calories, double price) {
         this.name = name;
         this.calories = calories;
         this.price = price;
@@ -37,5 +40,5 @@ public abstract class MenuElement {
 
     public void setPrice(double price) {
         this.price = price;
-    }
+    }*/
 }
