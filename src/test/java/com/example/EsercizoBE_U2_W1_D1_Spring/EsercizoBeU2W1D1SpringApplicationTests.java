@@ -32,13 +32,13 @@ class EsercizoBeU2W1D1SpringApplicationTests {
     }
 
     @Test
-    void createPizzaXL() {
+    void testCreatePizzaXL() {
         Pizza pXl = appService.createSalamiPizzaXL();
         assertTrue(pXl.isXl());
     }
 
     @Test
-    void addMenuElementToOrder() {
+    void testAddMenuElementToOrder() {
         Ordine o1 = new Ordine(4, appService.createTavolo1());
         o1.addMenuElement(appService.createHawaiianPizza());
 
